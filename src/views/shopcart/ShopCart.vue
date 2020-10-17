@@ -1,11 +1,11 @@
 <template>
    <div class="cart">
-<!--     --购物车(导航栏)-->
+      <!-- 购物车(导航栏) -->
      <nav-bar class="cart-nav-bar">
        <div slot="center">购物车({{cartLength}})</div>
      </nav-bar>
 
-<!--     商品列表-->
+     <!-- 商品列表 -->
      <cart-list/>
 
      <cart-bottom-bar/>

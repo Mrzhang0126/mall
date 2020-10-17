@@ -2,10 +2,11 @@
   <div class="goods-item" @click="itemClick">
 <!--    <img :src="goodsItem.show.img" @load="imageClick">-->
 <!--    <img :src="showImage" @load="imageClick">-->
-    <img v-lazy="showImage" @load="imageClick">
+    <!-- <img v-lazy="showImage" @load="imageClick"> -->
+    <img v-lazy="showImage" :key="showImage" @load="imageClick" alt="">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
-      <span class="price">{{goodsItem.price}}</span>
+      <span class="price">¥{{goodsItem.price}}</span>
       <span class="collect">{{goodsItem.cfav}}</span>
     </div>
   </div>
@@ -24,7 +25,8 @@
     },
     computed: {
       showImage() {
-        return this.goodsItem.image || this.goodsItem.show.img
+        // return this.goodsItem.image || this.goodsItem.show.
+        return this.goodsItem.img || this.goodsItem.image || this.goodsItem.show.img
       }
     },
     methods: {

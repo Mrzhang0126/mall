@@ -2,7 +2,7 @@ import {request} from "./request";
 
 export function getCategory() {
   return request({
-    url: "./category"
+    url: "/category"
   })
 }
 
@@ -15,11 +15,11 @@ export function getSubcategory(maitKey) {
   })
 }
 
-export function getCategoryDetail(miniWallKey, type) {
+export function getCategoryDetail(miniWallkey, type) {
   return request({
-    url: "/subcategory/detail",
+    url: '/subcategory/detail',
     params: {
-      miniWallKey,
+      miniWallkey,
       type
     }
   })
